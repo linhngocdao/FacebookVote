@@ -1,0 +1,10 @@
+.metaicon img{
+
+  pointer-events: inherit;
+  mask-image: url(https://static.xx.fbcdn.net/rsrc.php/v4/yM/r/DDgwTv3JehF.png);
+  mask-size: contain;
+  background-color: rgb(70, 90, 105);
+  object-position: 10000px 10000px;
+  object-fit: contain;
+  overflow: hidden;
+}
