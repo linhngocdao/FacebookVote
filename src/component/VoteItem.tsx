@@ -16,7 +16,6 @@ const VotingCard: React.FC<VotingCardProps> = ({ imageUrl, label, quote, votes, 
       className={`relative rounded-lg overflow-hidden group cursor-pointer transform transition-all duration-300 hover:scale-[1.02] hover:shadow-xl ${className}`}
       onClick={onClick}
     >
-      {/* Ảnh nền */}
       <img
         src={imageUrl}
         alt={label}
@@ -179,8 +178,6 @@ const VotingSection: React.FC = () => {
             </div>
           </div>
         )}
-
-        {/* Nút xem thêm */}
         {loadButtonVisible && (
           <div className="flex justify-center mt-8">
             <button

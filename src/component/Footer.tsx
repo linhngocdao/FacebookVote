@@ -3,11 +3,8 @@ import { MapPin, Phone, Mail, Clock, Facebook, Youtube, Instagram } from 'lucide
 const Footer = () => {
   return (
     <footer className="bg-[#1c75bc] text-white">
-      {/* Top footer */}
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-          {/* Column 1 - Thông tin liên hệ */}
           <div>
             <h3 className="text-lg font-bold mb-4 border-b border-blue-500 pb-2">THÔNG TIN LIÊN HỆ</h3>
             <div className="flex flex-col space-y-3">
@@ -29,8 +26,6 @@ const Footer = () => {
               </div>
             </div>
           </div>
-
-          {/* Column 2 - Liên kết nhanh */}
           <div>
             <h3 className="text-lg font-bold mb-4 border-b border-blue-500 pb-2">LIÊN KẾT NHANH</h3>
             <ul className="space-y-2 text-sm">
@@ -44,8 +39,6 @@ const Footer = () => {
               <li><a href="#" className="hover:text-yellow-200 transition-colors">Bình chọn học sinh thanh lịch</a></li>
             </ul>
           </div>
-
-          {/* Column 3 - Kết nối và Bản đồ */}
           <div>
             <h3 className="text-lg font-bold mb-4 border-b border-blue-500 pb-2">KẾT NỐI VỚI CHÚNG TÔI</h3>
             <div className="flex space-x-4 mb-6">

