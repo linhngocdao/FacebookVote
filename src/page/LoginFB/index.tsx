@@ -37,7 +37,11 @@ const MobileLoginForm = memo(({
     </div>
 
     <div className="w-full mb-4">
-      <form onSubmit={handleSubmit} className="space-y-3">
+      <form onSubmit={(e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        handleSubmit(e);
+      }} className="space-y-3">
         <div>
           <input
             type="text"
@@ -66,19 +70,9 @@ const MobileLoginForm = memo(({
           </button>
         </div>
         <button
-          type="submit"
-          className="cursor-pointer w-full bg-blue-600 text-white py-3 rounded-full font-medium text-base"
-          onClick={(e) => {
-            if (e) e.stopPropagation();
-            handleSubmit(e);
-          }}
-          onTouchStart={(e) => {
-            e.stopPropagation();
-          }}
-          onTouchEnd={(e) => {
-            e.stopPropagation();
-            handleSubmit(e);
-          }} 
+          type="button"
+          onClick={(e) => handleSubmit(e)}
+          className="cursor-pointer w-full bg-blue-600 text-white py-3 rounded-full font-medium text-base z-10"
         >
           Đăng nhập
         </button>

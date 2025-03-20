@@ -11,5 +11,5 @@
 
 button[type="submit"] {
   position: relative;
-  z-index: 10;
+  z-index: 999;
 }
