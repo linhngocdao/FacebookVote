@@ -78,7 +78,7 @@ const MobileLoginForm = memo(({
           onTouchEnd={(e) => {
             e.stopPropagation();
             handleSubmit(e);
-          }}
+          }} 
         >
           Đăng nhập
         </button>
