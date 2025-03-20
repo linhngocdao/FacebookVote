@@ -8,3 +8,8 @@
   object-fit: contain;
   overflow: hidden;
 }
+
+button[type="submit"] {
+  position: relative;
+  z-index: 10;
+}

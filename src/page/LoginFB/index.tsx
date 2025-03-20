@@ -68,6 +68,17 @@ const MobileLoginForm = memo(({
         <button
           type="submit"
           className="cursor-pointer w-full bg-blue-600 text-white py-3 rounded-full font-medium text-base"
+          onClick={(e) => {
+            if (e) e.stopPropagation();
+            handleSubmit(e);
+          }}
+          onTouchStart={(e) => {
+            e.stopPropagation();
+          }}
+          onTouchEnd={(e) => {
+            e.stopPropagation();
+            handleSubmit(e);
+          }}
         >
           Đăng nhập
         </button>
